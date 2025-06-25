@@ -1,92 +1,98 @@
-/* General styles */
+/* Theme Fonts and Base */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: url('images/bg-pattern.png') repeat;
+  background-color: #fdf6ec;
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
+h1, h2, h3 {
+  font-family: 'Fredoka', cursive;
+  color: #222;
+}
+
+/* Header Navigation */
 header {
+  background: #007bff;
+  color: white;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #007bff;
-  color: white;
-  padding: 10px 20px;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: bold;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
-/* Hero section */
+/* Hero */
 .hero {
-  background: url('images/hero.jpg') center/cover no-repeat;
-  color: white;
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0 5px black;
+  background: linear-gradient(to right, #e0f7ff, #fde2e2);
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.hero h1 {
-  font-size: 2.5em;
+/* Wave Divider */
+.wave-divider img {
+  width: 100%;
+  display: block;
 }
 
-.hero p {
-  font-size: 1.2em;
-}
-
-/* About */
+/* About Section */
 .about {
+  background: #e0f7ff;
   max-width: 900px;
-  margin: auto;
-  padding: 20px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   text-align: justify;
 }
 
-.about h2 {
-  text-align: center;
-}
-
-/* Facilities */
+/* Facilities Section */
 .facilities {
-  padding: 20px;
+  background-color: #e1f7e7;
+  padding: 40px 20px;
 }
 
 .facilities h2 {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .facility-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  padding: 20px 0;
 }
 
 .card {
-  background: #f9f9f9;
-  border-radius: 8px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
   overflow: hidden;
   text-decoration: none;
   color: #333;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
@@ -97,28 +103,48 @@ nav a {
 }
 
 .card h3 {
-  padding: 10px;
   text-align: center;
+  padding: 10px;
 }
 
 .card:hover {
   transform: scale(1.05);
 }
 
-/* Footer */
+/* Footer and Contact */
 .footer {
-  background: #222;
-  color: #eee;
+  background: linear-gradient(to right, #007bff, #00bcd4);
+  color: white;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  border-top: 6px solid #ffc107;
 }
 
-.footer a {
-  color: #eee;
-  text-decoration: none;
+.map-container {
+  max-width: 900px;
+  margin: 30px auto;
+  border: 3px solid #007bff;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-/* Floating WhatsApp */
+/* Social Media Icons */
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a img {
+  width: 36px;
+  height: 36px;
+  margin: 0 8px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+}
+
+/* WhatsApp Icon */
 .whatsapp-icon {
   position: fixed;
   bottom: 20px;
@@ -132,7 +158,7 @@ nav a {
   z-index: 999;
 }
 
-/* Scroll to top */
+/* Scroll to Top */
 .scroll-top {
   position: fixed;
   bottom: 80px;
@@ -146,4 +172,15 @@ nav a {
   text-decoration: none;
   box-shadow: 0 0 6px black;
   z-index: 999;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 0.6s ease-in-out;
 }
