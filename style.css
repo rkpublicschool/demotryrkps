@@ -54,7 +54,10 @@ header {
   cursor: pointer;
   color: white;
 }
-
+body {
+  margin: 0;
+  padding-top: 60px; /* adjust for fixed header */
+}
 /* Mobile nav styles */
 @media (max-width: 768px) {
   .menu-toggle {
