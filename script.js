@@ -34,11 +34,15 @@ document.addEventListener('DOMContentLoaded', function () {
     navList.classList.toggle('active');
   });
 });
-document.addEventListener('DOMContentLoaded', function () {
+// Hamburger menu toggle (✔ Works with delayed load)
+window.addEventListener('load', function () {
   const menuToggle = document.getElementById('mobile-menu');
   const navList = document.querySelector('.nav-list');
 
-  menuToggle.addEventListener('click', () => {
-    navList.classList.toggle('active');
-  });
+  if (menuToggle && navList) {
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+  }
 });
+
