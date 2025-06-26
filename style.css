@@ -23,10 +23,21 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
+.logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
 .logo {
-  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.school-name {
+  font-size: 1.4em;
+  color: white;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Desktop nav */
