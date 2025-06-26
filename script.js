@@ -34,5 +34,31 @@ document.addEventListener('DOMContentLoaded', function () {
     navList.classList.toggle('active');
   });
 });
+// Hero Slider Script
+let slideIndex = 0;
+const slides = document.querySelectorAll('.hero-slider .slide');
+const prev = document.querySelector('.slider-controls .prev');
+const next = document.querySelector('.slider-controls .next');
 
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
+}
 
+function nextSlide() {
+  slideIndex = (slideIndex + 1) % slides.length;
+  showSlide(slideIndex);
+}
+
+function prevSlide() {
+  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+  showSlide(slideIndex);
+}
+
+// Auto play every 5 seconds
+setInterval(nextSlide, 5000);
+
+next.addEventListener('click', nextSlide);
+prev.addEventListener('click', prevSlide);
