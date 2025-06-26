@@ -10,31 +10,77 @@ h1, h2, h3 {
   font-family: 'Fredoka', cursive;
   color: #222;
 }
+/* Header styling */
 header {
-  background: #007bff;
+  background-color: #003366;
   color: white;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 10px 20px;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.logo { font-size: 1.6em; font-weight: bold; }
-nav ul {
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Desktop nav */
+.navbar {
+  display: flex;
+}
+
+.nav-list {
   list-style: none;
   display: flex;
   gap: 20px;
-  padding: 0;
   margin: 0;
-  flex-wrap: wrap;
+  padding: 0;
 }
-nav a {
+
+.nav-list li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile nav styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-list li {
+    margin: 10px 0;
+  }
+}
+
 .hero {
   background: linear-gradient(to right, #e0f7ff, #fde2e2);
   text-align: center;
