@@ -468,20 +468,38 @@ header {
 nav ul li.dropdown:hover .dropdown-menu {
   display: block;
 }
-.dropdown-menu {
+/* Dropdown Menu */
+nav ul li.dropdown {
+  position: relative;
+}
+
+nav ul li .dropdown-menu {
   display: none;
   position: absolute;
-  background: #f1f1f1;  /* Light grey instead of white */
+  background-color: #f1f1f1;  /* Light grey background */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   padding: 10px 0;
   list-style: none;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
   z-index: 999;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
 }
+
+nav ul li:hover .dropdown-menu {
+  display: block;
+}
+
 .dropdown-menu li {
-  padding: 6px 20px;
-  color: #333;
+  padding: 8px 20px;
 }
+
+.dropdown-menu li a {
+  color: #111;  /* Dark visible text */
+  text-decoration: none;
+  font-weight: 500;
+}
+
 .dropdown-menu li:hover {
-  background: #e0e0e0;
-  cursor: pointer;
+  background-color: #dceeff; /* Soft blue hover */
 }
