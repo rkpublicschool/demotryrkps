@@ -468,26 +468,15 @@ header {
 nav ul li.dropdown:hover .dropdown-menu {
   display: block;
 }
-/* Dropdown Menu */
-nav ul li.dropdown {
-  position: relative;
-}
-
-nav ul li .dropdown-menu {
+.dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;  /* Light grey background */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #003366; /* Dark Blue */
   padding: 10px 0;
   list-style: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  border-radius: 4px;
   z-index: 999;
-  top: 100%;
-  left: 0;
-  min-width: 160px;
-}
-
-nav ul li:hover .dropdown-menu {
-  display: block;
 }
 
 .dropdown-menu li {
@@ -495,11 +484,15 @@ nav ul li:hover .dropdown-menu {
 }
 
 .dropdown-menu li a {
-  color: #111;  /* Dark visible text */
+  color: #ffffff; /* White text */
   text-decoration: none;
-  font-weight: 500;
+  display: block;
 }
 
 .dropdown-menu li:hover {
-  background-color: #dceeff; /* Soft blue hover */
+  background-color: #0055a5; /* Hover Blue */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
